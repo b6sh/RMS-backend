@@ -22,5 +22,5 @@ Route::middleware(['auth:sanctum'])->get('/user', function (Request $request) {
 
 
 
+Route::middleware('auth:sanctum')->apiResource('report', ReportController::class);
 
-Route::middleware('auth:sanctum')->post('/request', [ReportController::class, 'store']);
